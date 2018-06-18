@@ -26,55 +26,30 @@ class DashboardPage extends React.Component {
         title="Dashboard"
         breadcrumbs={[{ name: 'Dashboard', active: true }]}>
         <Row>
-          <Col lg={3} md={6} sm={6} xs={12}>
+          <Col lg={4} md={6} sm={6} xs={12}>
             <NumberWidget
-              title="Total Profit"
+              title="Avg Visits Per Day"
               subtitle="This month"
-              number="9.8k"
+              number="193"
               color="secondary"
-              progress={{
-                value: 75,
-                label: 'Last month',
-              }}
             />
           </Col>
 
-          <Col lg={3} md={6} sm={6} xs={12}>
+          <Col lg={4} md={6} sm={6} xs={12}>
             <NumberWidget
-              title="Monthly Visitors"
-              subtitle="This month"
-              number="5,400"
+              title="Most Visited Domain"
+              subtitle="google.com"
+              number="2,217"
               color="secondary"
-              progress={{
-                value: 45,
-                label: 'Last month',
-              }}
             />
           </Col>
 
-          <Col lg={3} md={6} sm={6} xs={12}>
+          <Col lg={4} md={6} sm={6} xs={12}>
             <NumberWidget
-              title="New Users"
-              subtitle="This month"
-              number="3,400"
+              title="Visit Count On Busiest Day"
+              subtitle="April 27, 2018"
+              number="670"
               color="secondary"
-              progress={{
-                value: 90,
-                label: 'Last month',
-              }}
-            />
-          </Col>
-
-          <Col lg={3} md={6} sm={6} xs={12}>
-            <NumberWidget
-              title="Bounce Rate"
-              subtitle="This month"
-              number="38%"
-              color="secondary"
-              progress={{
-                value: 60,
-                label: 'Last month',
-              }}
             />
           </Col>
         </Row>
@@ -83,7 +58,7 @@ class DashboardPage extends React.Component {
           <Col lg="11" md="12" sm="12" xs="12">
             <Card>
               <CardHeader>
-                Total Revenue{' '}
+                Visits Per Day{' '}
                 <small className="text-muted text-capitalize">This year</small>
               </CardHeader>
               <CardBody>
@@ -96,7 +71,7 @@ class DashboardPage extends React.Component {
         <Row>
           <Col>
             <Card className="mb-3">
-              <CardHeader>STRIPED</CardHeader>
+              <CardHeader>TOP 3 MOST VISITED SITES</CardHeader>
               <CardBody>
                 <Row>
                   <Col>
@@ -105,29 +80,25 @@ class DashboardPage extends React.Component {
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
+                            <th>Domain Name</th>
+                            <th>Visit Count</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td>google.com</td>
+                            <td>2,217</td>
                           </tr>
                           <tr>
                             <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
+                            <td>github.com</td>
+                            <td>1,862</td>
                           </tr>
                           <tr>
                             <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
+                            <td>fullstackacademy.com</td>
+                            <td>1,654</td>
                           </tr>
                         </tbody>
                       </Table>

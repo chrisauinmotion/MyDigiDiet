@@ -41,9 +41,9 @@ function createWindow() {
   mainWindow.once('ready-to-show', () => {
     mainWindow.show();
     // Open the DevTools automatically if developing
-    if ( dev ) {
-      mainWindow.webContents.openDevTools();
-    }
+    // if ( dev ) {
+    //   mainWindow.webContents.openDevTools();
+    // }
   });
 
   // Emitted when the window is closed.

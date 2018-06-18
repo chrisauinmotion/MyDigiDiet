@@ -62,8 +62,8 @@ class Sidebar extends React.Component {
           <Navbar>
             <img
               src={logo200Image}
-              width="40"
-              height="30"
+              width="100"
+              height="90"
               className="pr-2"
               alt=""
             />
