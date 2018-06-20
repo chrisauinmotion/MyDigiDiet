@@ -2,17 +2,17 @@ import React from 'react';
 import { getColor } from '../utils/colors';
 import { randomNum } from '../utils/demos';
 import { Row, Col, Card, CardHeader, CardBody } from 'reactstrap';
-import { Line, Pie, Doughnut, Bar, Radar, Polar } from 'react-chartjs-2';
+import { Line, Pie, Bar } from 'react-chartjs-2';
 import Page from '../components/Page';
 
-const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const MONTHS = ['January', 'February', 'March', 'April', 'May'];
 
-const genLineData = (moreData = {}, moreData2 = {}) => {
+const genLineData = (moreData = {}, moreData2 = {}, moreData3 = {}, moreData4 = {}, moreData5 = {}) => {
   return {
     labels: MONTHS,
     datasets: [
       {
-        label: 'Dataset 1',
+        label: 'Sports',
         backgroundColor: getColor('primary'),
         borderColor: getColor('primary'),
         borderWidth: 1,
@@ -22,13 +22,11 @@ const genLineData = (moreData = {}, moreData2 = {}) => {
           randomNum(),
           randomNum(),
           randomNum(),
-          randomNum(),
-          randomNum(),
         ],
         ...moreData,
       },
       {
-        label: 'Dataset 2',
+        label: 'News',
         backgroundColor: getColor('secondary'),
         borderColor: getColor('secondary'),
         borderWidth: 1,
@@ -38,10 +36,50 @@ const genLineData = (moreData = {}, moreData2 = {}) => {
           randomNum(),
           randomNum(),
           randomNum(),
+        ],
+        ...moreData2,
+      },
+      {
+        label: 'Social Media',
+        backgroundColor: getColor('success'),
+        borderColor: getColor('success'),
+        borderWidth: 1,
+        data: [
+          randomNum(),
+          randomNum(),
+          randomNum(),
           randomNum(),
           randomNum(),
         ],
-        ...moreData2,
+        ...moreData3,
+      },
+      {
+        label: 'Shopping',
+        backgroundColor: getColor('info'),
+        borderColor: getColor('info'),
+        borderWidth: 1,
+        data: [
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+        ],
+        ...moreData4,
+      },
+      {
+        label: 'Video Streaming',
+        backgroundColor: getColor('danger'),
+        borderColor: getColor('danger'),
+        borderWidth: 1,
+        data: [
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+          randomNum(),
+        ],
+        ...moreData5,
       },
     ],
   };
@@ -62,7 +100,7 @@ const genPieData = () => {
         label: 'Dataset 1',
       },
     ],
-    labels: ['Data 1', 'Data 2', 'Data 3', 'Data 4', 'Data 5'],
+    labels: ['Sports', 'News', 'Social Media', 'Shopping', 'Video Streaming'],
   };
 };
 
@@ -72,7 +110,7 @@ const ChartPage = () => {
       <Row>
         <Col xl={6} lg={12} md={12}>
           <Card>
-            <CardHeader>Bar</CardHeader>
+            <CardHeader>Category Visits Per Month (Bar Chart)</CardHeader>
             <CardBody>
               <Bar data={genLineData()} />
             </CardBody>
@@ -81,9 +119,9 @@ const ChartPage = () => {
 
         <Col xl={6} lg={12} md={12}>
           <Card>
-            <CardHeader>Line</CardHeader>
+            <CardHeader>Category Visits Per Month (Line Chart)</CardHeader>
             <CardBody>
-              <Line data={genLineData({ fill: false }, { fill: false })} />
+              <Line data={genLineData({ fill: false }, { fill: false }, { fill: false }, { fill: false }, { fill: false })} />
             </CardBody>
           </Card>
         </Col>
@@ -92,50 +130,7 @@ const ChartPage = () => {
       <Row>
         <Col xl={6} lg={12} md={12}>
           <Card>
-            <CardHeader>Stacked Line</CardHeader>
-            <CardBody>
-              <Line
-                data={genLineData()}
-                options={{
-                  scales: {
-                    xAxes: [
-                      {
-                        scaleLabel: {
-                          display: true,
-                          labelString: 'Month',
-                        },
-                      },
-                    ],
-                    yAxes: [
-                      {
-                        stacked: true,
-                        scaleLabel: {
-                          display: true,
-                          labelString: 'Value',
-                        },
-                      },
-                    ],
-                  },
-                }}
-              />
-            </CardBody>
-          </Card>
-        </Col>
-
-        <Col xl={6} lg={12} md={12}>
-          <Card>
-            <CardHeader>Combo Bar / Line</CardHeader>
-            <CardBody>
-              <Bar data={genLineData({ type: 'line', fill: false })} />
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-
-      <Row>
-        <Col xl={6} lg={12} md={12}>
-          <Card>
-            <CardHeader>Pie</CardHeader>
+            <CardHeader>Site Categories</CardHeader>
             <CardBody>
               <Pie data={genPieData()} />
             </CardBody>
@@ -144,29 +139,9 @@ const ChartPage = () => {
 
         <Col xl={6} lg={12} md={12}>
           <Card>
-            <CardHeader>Doughnut</CardHeader>
+            <CardHeader>Category Visits Per Month (Combo Bar / Line)</CardHeader>
             <CardBody>
-              <Doughnut data={genPieData()} />
-            </CardBody>
-          </Card>
-        </Col>
-      </Row>
-
-      <Row>
-        <Col xl={6} lg={12} md={12}>
-          <Card>
-            <CardHeader>Polar</CardHeader>
-            <CardBody>
-              <Polar data={genPieData()} />
-            </CardBody>
-          </Card>
-        </Col>
-
-        <Col xl={6} lg={12} md={12}>
-          <Card>
-            <CardHeader>Radar</CardHeader>
-            <CardBody>
-              <Radar data={genLineData()} />
+              <Bar data={genLineData({ type: 'line', fill: false }, { type: 'bar' }, { type: 'line', fill: false }, { type: 'bar' }, { type: 'line', fill: false })} />
             </CardBody>
           </Card>
         </Col>

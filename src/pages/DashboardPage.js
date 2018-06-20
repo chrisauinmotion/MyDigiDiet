@@ -7,7 +7,7 @@ import {
   Col,
   Table,
 } from 'reactstrap';
-import { Line, Bar } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import { chartjs } from '../demos/dashboardPage';
 import Page from '../components/Page';
 import NumberWidget from '../components/NumberWidget';
@@ -58,8 +58,8 @@ class DashboardPage extends React.Component {
           <Col lg="11" md="12" sm="12" xs="12">
             <Card>
               <CardHeader>
-                Visits Per Day{' '}
-                <small className="text-muted text-capitalize">This year</small>
+                Avg Visits Per Day{' '}
+                <small className="text-muted text-capitalize">By Month</small>
               </CardHeader>
               <CardBody>
                 <Line data={chartjs.line.data} options={chartjs.line.options} />

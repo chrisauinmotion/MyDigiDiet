@@ -26,7 +26,7 @@ const sidebarBackground = {
 const navItems = [
   { to: '/', name: 'dashboard', exact: true, Icon: MdDashboard },
   { to: '/charts', name: 'charts', exact: false, Icon: MdInsertChart },
-  { to: '/widgets', name: 'widgets', exact: false, Icon: MdWidgets },
+  { to: '/widgets', name: 'trends', exact: false, Icon: MdWidgets },
   { to: '/tables', name: 'tables', exact: false, Icon: MdBorderAll }
 ];
 
@@ -62,8 +62,8 @@ class Sidebar extends React.Component {
           <Navbar>
             <img
               src={logo200Image}
-              width="100"
-              height="90"
+              width="150"
+              height="140"
               className="pr-2"
               alt=""
             />

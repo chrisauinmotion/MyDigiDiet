@@ -83,10 +83,10 @@ export const chartjs = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
         {
-          label: 'Visits per day this year',
+          label: 'Visits per day this month',
           borderColor: '#a3e472',
           backgroundColor: '#a3e472',
-          data: [28, 370, 152, 127, 156, 224, 3, 172, 192, 198, 298, 190, 158, 344, 153],
+          data: [100, 370, 152, 127, 156, 224, 93, 172, 192, 198, 298, 150],
         },
       ],
     },

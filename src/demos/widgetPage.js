@@ -62,12 +62,11 @@ export const iconWidgetsData = [
 ];
 
 export const numberWidgetsData = [
-  { color: 'primary' },
-  { color: 'secondary' },
-  { color: 'success' },
-  { color: 'info' },
-  { color: 'warning' },
-  { color: 'danger' },
-  { color: 'light' },
-  { color: 'dark' },
+  { color: 'primary', title: 'Most Visited Category', number: 'News', subtitle: '' },
+  { color: 'secondary', title: 'Busiest Time of Day', number: '10am', subtitle: '' },
+  { color: 'success', title: 'Busiest Day of the Week', number: 'Thursday', subtitle: '' },
+  { color: 'info', title: 'Busiest Day This Month', number: 'June 14, 2018', subtitle: '' },
+  { color: 'warning', title: 'Second Most Visited Category', number: 'Video Streaming', subtitle: '' },
+  { color: 'danger', title: 'Month With Most Visits', number: 'April', subtitle: '' },
+  { color: 'dark', title: 'Number of Sites Visited This Year', number: '15,689', subtitle: '' },
 ];
